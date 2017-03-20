@@ -75,6 +75,7 @@ func configGenerator(abortChan chan bool) {
 
 		// Have we been flagged for a config rebuild?
 		if !shouldGenerateConfig {
+			time.Sleep(time.Second * 1)
 			continue
 		}
 
@@ -188,6 +189,7 @@ func repoGenerator(abortChan chan bool) {
 
 		// Check if we should generate the repo
 		if !shouldGenerateRepo {
+			time.Sleep(time.Second * 1)
 			continue
 		}
 
