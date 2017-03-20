@@ -278,7 +278,7 @@ func serveHttp(abortChan chan bool) {
 		pendingUpdates[update.packageName] = update
 		updateMutex.Unlock()
 
-		shouldGenerateRepo = true
+		shouldGenerateConfig = true
 		w.WriteHeader(200)
 		w.Write([]byte("{\"success\": true}"))
 	})
